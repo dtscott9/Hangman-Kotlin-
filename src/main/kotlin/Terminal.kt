@@ -21,9 +21,9 @@ class Terminal {
             {
                 dashedWord.set(correctIndex, playerGuess)
                 correctIndex = correctWord.indexOf(playerGuess, correctIndex + 1)
-                println("That is correct")
                 status = true
             }
+            println("That is correct")
         }
 
         else
