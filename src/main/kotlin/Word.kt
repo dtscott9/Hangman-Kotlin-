@@ -5,7 +5,8 @@ class Word {
 
     val wordList = arrayOf<String>("python", "java", "javascript", "mysql", "function", "class",
         "object", "variable", "loop", "visualstudio", "instance", "csharp", "statement", "script",
-        "method", "code", "program", "software", "kotlin")
+        "method", "code", "program", "software", "kotlin", "bug", "jetbrains", "node", "expression",
+        "conditional", "data")
 
     public fun GenRandomWord(): String {
         var newWord = wordList.random()

@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
     var terminal = Terminal()
     terminal.createWordToGuess(wordToGuess)
     var hangman = HangmanFigure()
+    var gameStatus:Boolean = true
 
     fun GameLost()
     {
@@ -21,28 +22,49 @@ fun main(args: Array<String>) {
         println("Congratulation you Won!")
     }
 
-    while (terminal.dashedWord.contains('_'))
-    {
+    fun Isplaying() {
+        while (terminal.dashedWord.contains('_')) {
 //        println(wordToGuess)
-        hangman.checkPlayerLives(playerLives)
-        println(terminal.dashedWord)
-        terminal.checkUserGuess(wordToGuess)
+            hangman.checkPlayerLives(playerLives)
+            println(terminal.dashedWord)
+            terminal.checkUserGuess(wordToGuess)
 
-        if (!terminal.status)
-        {
-            if (playerLives >= 2) {
-                playerLives -= 1
-            } else {
-                GameLost()
-                break
+            if (!terminal.status) {
+                if (playerLives >= 2) {
+                    playerLives -= 1
+                } else {
+                    GameLost()
+                    break
+                }
             }
         }
-
+        if (terminal.status)
+        {
+            GameWon()
+        }
     }
 
-    if (terminal.status)
+fun StartGame()
+{
+    while(gameStatus)
     {
-        GameWon()
+        Isplaying()
+        println("Would you like to play again? Y/N")
+        var userChoice = readln()
+        if(userChoice.lowercase() == "n")
+        {
+            gameStatus = false
+        }
+        else
+        {
+            word.GenRandomWord()
+            wordToGuess = word._wordToGuess
+            playerLives = 6
+            terminal.createWordToGuess(wordToGuess)
+        }
     }
+}
+
+StartGame()
 
 }
