@@ -6,7 +6,7 @@ The program is a version of the game hangman. The
 player guesses a letter that they think the word may
 contain, and they do so until the complete word is
 revealed to them. If the player guesses incorrectly,
-a body part is added to hangman. If the hangman is
+a body part is added to the hangman. If the hangman is
 complete, the game is over.
 
 Demonstration Video:
