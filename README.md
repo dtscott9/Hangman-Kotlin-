@@ -9,7 +9,7 @@ revealed to them. If the player guesses incorrectly,
 a body part is added to the hangman. If the hangman is
 complete, the game is over.
 
-Demonstration Video:
+Demonstration Video: https://www.youtube.com/watch?v=wSzEAYxoGho
 
 # Development Environment
 I developed this program in the Kotlin language and used
