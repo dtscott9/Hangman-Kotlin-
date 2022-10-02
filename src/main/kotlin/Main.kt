@@ -9,6 +9,7 @@ fun main(args: Array<String>) {
     var hangman = HangmanFigure()
     var gameStatus:Boolean = true
 
+    //Displays Game Over screen
     fun GameLost()
     {
         println(hangman.hangman[6])
@@ -16,12 +17,14 @@ fun main(args: Array<String>) {
         println("The word was: $wordToGuess")
     }
 
+    //Displays win screen
     fun GameWon()
     {
         println(wordToGuess)
         println("Congratulation you Won!")
     }
 
+    //Checks to see if the word still contains underscores
     fun Isplaying() {
         while (terminal.dashedWord.contains('_')) {
 //        println(wordToGuess)
@@ -44,6 +47,7 @@ fun main(args: Array<String>) {
         }
     }
 
+    //This will start the game and then ask the player if they want to replay after the game is over
 fun StartGame()
 {
     while(gameStatus)

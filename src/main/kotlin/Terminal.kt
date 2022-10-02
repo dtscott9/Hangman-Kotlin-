@@ -16,7 +16,7 @@ class Terminal {
         var correctIndex = correctWord.indexOf(playerGuess)
 
         if (correctWord.contains(playerGuess)) {
-
+            //This while loop checks to see if the letter guessed is in the word more than once
             while (correctIndex >= 0)
             {
                 dashedWord.set(correctIndex, playerGuess)
@@ -39,6 +39,7 @@ class Terminal {
         val wordCount = dashedWord.count()
         var index:Int = 0
 
+        //This while loop goes through the index of each letter in the word to guess and converts it to an underscore
         while (index < wordCount)
         {
           dashedWord.set(index, '_')
