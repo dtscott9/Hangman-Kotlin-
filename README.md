@@ -27,6 +27,8 @@ because of templates and tools it provides for Kotlin.
 
 [W3 Schools](https://www.w3schools.com/)
 
+[Youtube](https://www.youtube.com/watch?v=Ry5Oqvedevc)
+
 # Future Work
 1. Add ability to guess the entire word at once
 2. Make it so the player can't guess the same letter twice

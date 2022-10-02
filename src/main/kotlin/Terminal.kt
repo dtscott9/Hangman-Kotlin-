@@ -32,8 +32,6 @@ class Terminal {
             status = false
         }
 
-
-
     }
     public fun createWordToGuess(correctWord: String): CharArray {
         dashedWord = correctWord.toCharArray()
